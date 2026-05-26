@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Jayant Chauhan</title>
+  <meta name="description" content="Resume of Jayant Chauhan — CS undergrad at NSUT, open-source contributor, ML practitioner.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">jayant.</a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link active">Resume</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07-7.07-1.42 1.42M8.35 15.65l-1.42 1.42m0-12.14 1.42 1.42m7.3 7.3 1.42 1.42"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-wrap">
+
+      <div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+        <div>
+          <h1 class="page-title">Resume</h1>
+          <p class="page-sub" style="margin-top: 0.5rem;">Last updated May 2026</p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <section class="cv-section reveal">
+        <div class="cv-heading">Education</div>
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">B.Tech — Computer Science</div>
+            <div class="cv-org">Netaji Subhas University of Technology (NSUT), New Delhi</div>
+            <div class="cv-body" style="margin-top: 0.4rem;">
+              <p>JEE Main: 99.22 percentile · JEE Advanced: AIR 10,527</p>
+              <p style="margin-top: 0.3rem;"><strong style="color: var(--text);">Coursework:</strong> Data Structures &amp; Algorithms, OOP (C++), Operating Systems, DBMS, Probability &amp; Statistics, Design &amp; Analysis of Algorithms, Computer Architecture, Microprocessors</p>
+            </div>
+          </div>
+          <div class="cv-date">2024 – 2028</div>
+        </div>
+      </section>
+
+      <!-- Open Source Experience -->
+      <section class="cv-section reveal">
+        <div class="cv-heading">Open Source Experience</div>
+
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">Contributor — GCC Rust (gccrs)</div>
+            <div class="cv-org">GNU Compiler Collection · Remote</div>
+            <div class="cv-body" style="margin-top: 0.4rem;">
+              <ul>
+                <li>Authored and merged 20+ PRs into the GNU Toolchain's Rust frontend, resolving critical Internal Compiler Errors (ICEs) in rust-attributes.cc and adding regression tests.</li>
+                <li>Developed AST and HIR reconstruction logic, creating foundational infrastructure to extend Rust pattern matching support across parse, expand, and backend passes.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-date">Jan 2026 – Present</div>
+        </div>
+
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">Contributor — Statistics Package</div>
+            <div class="cv-org">GNU Octave · Remote</div>
+            <div class="cv-body" style="margin-top: 0.4rem;">
+              <ul>
+                <li>PR #345 — stepwisefit Rewrite (Merged): Rewrote the stepwise regression backend from scratch, implementing F-test and p-value computation for variable selection loops.</li>
+                <li>PR #347 — dummyvar (Merged): Proposed and implemented one-hot encoding for numeric and categorical variables for the first time in the package.</li>
+                <li>Issue #266 — LinearModel Design Roadmap (Active): Authored a 5-phase implementation roadmap for the LinearModel class hierarchy.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-date">Oct 2025 – Jan 2026</div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="cv-section reveal">
+        <div class="cv-heading">Projects</div>
+
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">SatyaSetu.AI — AI-Powered Digital Forensics &amp; Fraud Detection</div>
+            <div class="cv-body" style="margin-top: 0.3rem;">
+              <ul>
+                <li>Designed a full-stack forensic analysis platform combining OCR, NER, TF-IDF + Sentence-BERT scam classification, and XGBoost-based corruption risk prediction.</li>
+                <li>Trained fraud detection model on 1.8M+ public procurement contracts, achieving R²=0.74 and RMSE=0.098; cross-validated on international datasets.</li>
+                <li>Engineered rule-based fraud signals alongside ML features; exposed predictions via FastAPI with batch analysis and automated PDF report generation.</li>
+              </ul>
+              <p style="margin-top: 0.35rem;"><strong style="color: var(--text);">Stack:</strong> Python, FastAPI, XGBoost, spaCy, Tesseract, PyMuPDF</p>
+            </div>
+          </div>
+          <div class="cv-date">Top 30, India Innovates 2026</div>
+        </div>
+
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">VividReel — AI-Powered Event Video Summarization</div>
+            <div class="cv-body" style="margin-top: 0.3rem;">
+              <ul>
+                <li>Built an end-to-end CV pipeline (PySceneDetect + OpenCV) that scores clips on focus quality, motion dynamics, and face presence, then assembles cinematic reels via a FastAPI microservice — cutting manual editing time by ~90%.</li>
+                <li>Architected multi-stage processing with MoviePy for dynamic assembly, automated transitions, and thematic audio; deployed as a production microservice.</li>
+              </ul>
+              <p style="margin-top: 0.35rem;"><strong style="color: var(--text);">Stack:</strong> Python, OpenCV, PySceneDetect, FastAPI, MoviePy</p>
+            </div>
+          </div>
+          <div class="cv-date">Hackathon Winner</div>
+        </div>
+
+        <div style="padding: 0.75rem 0;">
+          <a href="projects.html" style="color: var(--accent); font-size: 0.875rem;">View all projects →</a>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="cv-section reveal">
+        <div class="cv-heading">Technical Skills</div>
+        <div class="skills-grid" style="margin-top: 0.75rem;">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SQL</span>
+              <span class="tag">MATLAB/Octave</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>ML &amp; AI</h3>
+            <div class="skill-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow/Keras</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">LlamaIndex</span>
+              <span class="tag">OpenCV</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; Tooling</h3>
+            <div class="skill-tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Jupyter</span>
+              <span class="tag">spaCy</span>
+              <span class="tag">PySceneDetect</span>
+              <span class="tag">MoviePy</span>
+              <span class="tag">Tesseract</span>
+              <span class="tag">PyMuPDF</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Engineering</h3>
+            <div class="skill-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git/GitHub</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Agile/Scrum</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership -->
+      <section class="cv-section reveal">
+        <div class="cv-heading">Leadership &amp; Volunteering</div>
+        <div class="cv-entry">
+          <div>
+            <div class="cv-title">Core Member — PRAYAS</div>
+            <div class="cv-org">NSUT, New Delhi</div>
+            <div class="cv-body" style="margin-top: 0.3rem;">
+              <p>Mentored underprivileged students in math and science; co-organized a seminar with Microsoft and Salesforce professionals, providing career guidance to 20+ female students.</p>
+            </div>
+          </div>
+          <div class="cv-date">2024 – Present</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Jayant Chauhan · 2026</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
