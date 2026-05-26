@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Jayant Chauhan</title>
+  <meta name="description" content="Projects by Jayant Chauhan — AI forensics, video summarisation, open-source compilers, and more.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">jayant.</a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07-7.07-1.42 1.42M8.35 15.65l-1.42 1.42m0-12.14 1.42 1.42m7.3 7.3 1.42 1.42"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-wrap">
+
+      <div class="reveal">
+        <h1 class="page-title">Projects</h1>
+        <p class="page-sub">
+          A mix of applied ML, open-source contributions, and engineering work.
+          Most of these started as curiosity and turned into something worth sharing.
+        </p>
+      </div>
+
+      <div class="spacer-sm"></div>
+
+      <!-- Filter -->
+      <div class="filter-row reveal" id="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="oss">Open Source</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <!-- Projects -->
+      <div class="proj-grid reveal-stagger">
+
+        <div class="proj-card" data-cat="ml tools">
+          <div>
+            <div class="proj-title">
+              SatyaSetu.AI
+              <span class="proj-badge">Top 30 — India Innovates 2026</span>
+            </div>
+            <div class="proj-desc">
+              Full-stack forensic analysis platform combining OCR (Tesseract + PyMuPDF),
+              NER (spaCy), TF-IDF + Sentence-BERT scam classification, and XGBoost-based
+              corruption risk prediction into a unified evidence processing pipeline. Trained
+              on 1.8M+ public procurement contracts (Digiwhist Romania 2023), achieving R²=0.74
+              and RMSE=0.098 on a composite risk indicator target. Cross-validated on international
+              datasets. Exposed via FastAPI with batch analysis and automated PDF forensic report generation.
+            </div>
+            <div class="proj-tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">spaCy</span>
+              <span class="tag">BERT</span>
+              <span class="tag">Tesseract</span>
+              <span class="tag">PyMuPDF</span>
+            </div>
+          </div>
+          <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+        </div>
+
+        <div class="proj-card" data-cat="ml tools">
+          <div>
+            <div class="proj-title">
+              VividReel
+              <span class="proj-badge">Hackathon Winner · Youngest Team</span>
+            </div>
+            <div class="proj-desc">
+              End-to-end computer vision pipeline (PySceneDetect + OpenCV) that scores clips
+              on focus quality, motion dynamics, and face presence, then assembles cinematic
+              highlight reels via a FastAPI microservice — cutting manual editing time by approximately
+              90%. Multi-stage processing with MoviePy for dynamic assembly, automated transitions,
+              and thematic audio overlay. Deployed as a production microservice handling full
+              event footage ingestion to final reel output.
+            </div>
+            <div class="proj-tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">PySceneDetect</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">MoviePy</span>
+            </div>
+          </div>
+          <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+        </div>
+
+        <div class="proj-card" data-cat="oss">
+          <div>
+            <div class="proj-title">GCC Rust (gccrs) — Compiler Contributions</div>
+            <div class="proj-desc">
+              20+ merged pull requests into the GNU Toolchain's Rust frontend. Resolved critical
+              Internal Compiler Errors (ICEs) in rust-attributes.cc and added robust regression
+              tests. Developed AST and HIR reconstruction logic, creating foundational infrastructure
+              to extend Rust pattern matching support. Implemented safety checks across parse, expand,
+              and backend compiler passes.
+            </div>
+            <div class="proj-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Rust</span>
+              <span class="tag">Compiler Design</span>
+              <span class="tag">GCC</span>
+            </div>
+          </div>
+          <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+        </div>
+
+        <div class="proj-card" data-cat="oss">
+          <div>
+            <div class="proj-title">GNU Octave — Statistics Package</div>
+            <div class="proj-desc">
+              Rewrote the stepwise regression backend from scratch (PR #345, merged), implementing
+              F-test and p-value computation for variable selection loops and Name-Value parsing.
+              Proposed and implemented one-hot encoding for numeric and categorical variables
+              (PR #347, merged) — a first for the package. Authored a 5-phase implementation roadmap
+              for the LinearModel class hierarchy (Issue #266, active).
+            </div>
+            <div class="proj-tags">
+              <span class="tag">MATLAB</span>
+              <span class="tag">C++</span>
+              <span class="tag">Statistics</span>
+              <span class="tag">Octave</span>
+            </div>
+          </div>
+          <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Jayant Chauhan · 2026</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://github.com/Pasta-coder" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
