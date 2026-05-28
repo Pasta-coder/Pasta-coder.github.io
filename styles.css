@@ -751,3 +751,43 @@ h2 {
   html { font-size: 15px; }
   .hero-links { flex-direction: column; }
 }
+
+/* --- Hero Layout for Photo --- */
+.hero-content {
+  display: flex;
+  flex-direction: column-reverse;
+  /* Stacks image on top of text on mobile */
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image-wrapper {
+  flex-shrink: 0;
+}
+
+.hero-profile-pic {
+  width: 250px;
+  /* Adjust this to change the image size */
+  height: 250px;
+  object-fit: cover;
+  /* Keeps the image from stretching */
+  border-radius: 50%;
+  /* Makes it a perfect circle */
+  border: 4px solid var(--text-main);
+  /* Optional: adds a border using your theme colors (adjust if needed) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* For larger screens (Desktop/Tablet) */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    /* Puts them side-by-side */
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
