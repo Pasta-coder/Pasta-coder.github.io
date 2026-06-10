@@ -567,7 +567,7 @@ h2 {
 
 /* ── CV / Resume page ───────────────────────── */
 .cv-section {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   border-bottom: 1px solid var(--border);
 }
 .cv-section:first-of-type { padding-top: 0; }
@@ -575,65 +575,83 @@ h2 {
 
 .cv-heading {
   font-family: var(--font-head);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--accent);
-  display: inline-block;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cv-heading::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
 }
 
 .cv-entry {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.4rem 1.5rem;
+  gap: 0.5rem 1.5rem;
   align-items: baseline;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 1.25rem;
+  margin: 0.5rem -1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
-.cv-entry:last-child { border-bottom: none; }
+.cv-entry:hover {
+  background: var(--bg2);
+  border-color: var(--border);
+}
 
 .cv-title {
-  font-weight: 500;
-  font-size: 0.9375rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .cv-org {
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--accent);
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
 }
 
 .cv-body {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--text2);
-  line-height: 1.7;
-  margin-top: 0.3rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
 }
 .cv-body li {
-  padding-left: 1rem;
+  padding-left: 1.1rem;
   position: relative;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 .cv-body li::before {
-  content: '–';
+  content: '→';
   position: absolute;
   left: 0;
   color: var(--faint);
+  font-size: 0.8em;
+  top: 0.2rem;
 }
 
 .cv-date {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--muted);
   white-space: nowrap;
   text-align: right;
   align-self: start;
-  padding-top: 0.15rem;
+  padding-top: 0.25rem;
 }
 
 /* ── Footer ─────────────────────────────────── */
